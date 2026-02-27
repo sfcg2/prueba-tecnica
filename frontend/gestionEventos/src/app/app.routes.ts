@@ -1,8 +1,9 @@
 import { Routes } from '@angular/router';
-import { Home } from './home/home';
 import { ListEvents } from './components/list-events/list-events';
+import { AddEvents } from './components/add-events/add-events';
 
 export const routes: Routes = [
 
-    {path: '', component: ListEvents,},
+    {path: 'eventos', component: ListEvents,},
+    {path: 'agregar', component: AddEvents,},
 ];
