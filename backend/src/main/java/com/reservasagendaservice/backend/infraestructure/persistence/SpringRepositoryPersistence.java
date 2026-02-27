@@ -1,4 +1,4 @@
-package com.reservasagendaservice.backend;
+package com.reservasagendaservice.backend.infraestructure.persistence;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import java.util.List;

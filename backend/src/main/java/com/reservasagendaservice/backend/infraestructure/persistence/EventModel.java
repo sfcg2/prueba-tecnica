@@ -1,4 +1,4 @@
-package com.reservasagendaservice.backend;
+package com.reservasagendaservice.backend.infraestructure.persistence;
 
 import jakarta.persistence.*;
 import lombok.Data;
@@ -17,10 +17,10 @@ public class EventModel {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(nullable = false, length = 50)
+    @Column(nullable = false, length = 100)
     private String eventName;
 
-    @Column(nullable = false, length = 50)
+    @Column(nullable = false, length = 200)
     private String description;
 
     @Column(nullable = false)

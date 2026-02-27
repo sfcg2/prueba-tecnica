@@ -1,10 +1,15 @@
-package com.reservasagendaservice.backend;
+package com.reservasagendaservice.backend.infraestructure.persistence;
 
-import com.reservasagendaservice.backend.DTO.EventMapper;
+import com.reservasagendaservice.backend.application.dto.EventMapper;
+import com.reservasagendaservice.backend.domain.Event;
+import com.reservasagendaservice.backend.domain.IRepository;
+import org.springframework.stereotype.Component;
+
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class EventRepository implements IRepository{
+@Component
+public class EventRepository implements IRepository {
 
 
     private final SpringRepositoryPersistence springRepositoryPersistence;
