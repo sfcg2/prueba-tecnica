@@ -1,7 +1,7 @@
-package com.reservasagendaservice.backend.DTO;
+package com.reservasagendaservice.backend.application.dto;
 
-import com.reservasagendaservice.backend.Event;
-import com.reservasagendaservice.backend.EventModel;
+import com.reservasagendaservice.backend.domain.Event;
+import com.reservasagendaservice.backend.infraestructure.persistence.EventModel;
 
 public class EventMapper {
 
@@ -11,7 +11,6 @@ public class EventMapper {
 
        EventModel model = new EventModel();
 
-       model.setId(event.getId());
        model.setEventName(event.getEventName());
        model.setDescription(event.getDescription());
        model.setStartDate(event.getStartDate());
@@ -25,7 +24,6 @@ public class EventMapper {
 
         Event event = new Event();
 
-        event.setId(model.getId());
         event.setEventName(model.getEventName());
         event.setDescription(model.getDescription());
         event.setStartDate(model.getStartDate());

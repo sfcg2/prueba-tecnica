@@ -1,12 +1,13 @@
-package com.reservasagendaservice.backend;
+package com.reservasagendaservice.backend.application.services;
 
-import com.reservasagendaservice.backend.DTO.EventMapper;
-import org.springframework.stereotype.Service;
+import com.reservasagendaservice.backend.domain.Event;
+import com.reservasagendaservice.backend.infraestructure.persistence.EventModel;
+import com.reservasagendaservice.backend.domain.IRepository;
+import com.reservasagendaservice.backend.application.dto.EventMapper;
 
 import java.util.List;
-import java.util.stream.Collectors;
 
-
+@org.springframework.stereotype.Service
 public class EventService {
 
 
@@ -38,10 +39,6 @@ public class EventService {
         EventModel savedEvent = iRepository.save(newEvent);
         return EventMapper.toDTO(savedEvent);
     }
-
-
-
-
 
 
     //3.PUT
