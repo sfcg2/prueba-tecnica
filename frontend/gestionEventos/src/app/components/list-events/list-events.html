@@ -1,0 +1,59 @@
+<style>
+  .events-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 2rem;
+  }
+
+  .event-card {
+    width: 100%;
+    max-width: 500px;
+    background: #1e1e1e;
+    padding: 1.8rem;
+    border-radius: 1.2rem;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .event-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
+  }
+
+  .event-title {
+    margin-bottom: 0.8rem;
+    font-size: 1.4rem;
+    background: linear-gradient(90deg, #ff4d6d, #c77dff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .event-description {
+    margin-bottom: 1rem;
+    color: #d1d1d1;
+  }
+
+  .event-date {
+    font-size: 0.9rem;
+    color: #aaa;
+  }
+</style>
+<div class="events-container">
+
+  @for (e of events; track $index) {
+    <div class="event-card">
+      <h2 class="event-title">{{ e.eventName }}</h2>
+      <p class="event-description">{{ e.description }}</p>
+      <p class="event-date">
+        <strong>Inicio:</strong> {{ e.startDate | date:'dd/MM/yyyy' }}
+      </p>
+      <p class="event-date">
+        <strong>Fin:</strong> {{ e.endDate | date:'dd/MM/yyyy' }}
+      </p>
+    </div>
+  }
+
+</div>
