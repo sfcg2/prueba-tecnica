@@ -9,7 +9,7 @@ import java.util.Date;
 @NoArgsConstructor
 public class Event {
 
-    private Number id;
+    private Long id;
     private String eventName;
     private String description;
     private Date startDate;
